@@ -1,0 +1,138 @@
+html, body{ 
+    /* *{} yerine => html,body{}  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 16px==1rem */
+    /* burada font-size degistirirsek rem degisir normnalde 1rem=16px
+    ben burada font-size:20px yaparsam 1rem=20px olur  */
+    font-size: 1rem;
+    font-family:"Lato", sans-serif;
+    color: #666666;
+    /* bu yuksekligi tanimlamadan background yukseklikleri calismaz */
+    height: 100%;
+}
+.background--image1{
+    /* backgroud a resim verme */
+    background-image: url(./images/bg.jpg);
+    /* paralax kulanacaksak specific(%) bir yukseklik vermemiz gerekiyor 
+    buradaki height in calismasi icin mutlaka html ve body ye de % height vermem lazim*/
+    min-height: 100%;
+}
+.background--image2{
+    background-image: url(./images/bg2.jpg);
+    height: 80%;
+}
+.background--image3{
+    background-image: url(./images/bg3.jpg);
+    height: 80%;
+}
+.background--image4{
+    background-image: url(./images/bg4.jpg);
+    height: 80%;
+}
+.background--image1,
+.background--image2,
+.background--image3,
+.background--image4{
+    /* bagroun merkeze almak */
+    background-position: center;
+    /* butun containeri kaplamasi icin */
+    background-size: cover;
+    /* img tekrarli olarak sayfaya dosemesini engelle */
+    background-repeat: no-repeat;
+
+    /* todo parallax-effect */
+    background-attachment: fixed;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* position absolute calismasi icin parent a relative vermen gerkir */
+    position: relative;
+    opacity: 0.7;
+}
+.heading-container{
+    text-align: center;
+    top: 50%;
+    /* absolute ile akistan cikmamasi icin width vrdik
+    text-allign center ile sayfanin ortasina gelmesi icin yatayda %100 yer tutmali */
+    width: 100%;
+    /* position absolute calismasi icin parent a relative vermen gerkir */
+    position: absolute;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+
+}
+.heading-containner__heading{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    outline: 0.5rem inset purple;
+    outline-offset: 1rem;
+}
+.heading-container__logo{
+    width: 30%;
+}
+.heading-containner__text{
+    background-color: black;
+    color: white;
+    padding: 0..7rem;
+    text-transform: capitalize;
+    border-radius: 0.7rem 0rem 0.7rem 0rem;
+    outline: 0.4rem inset purple;
+    /* border-outline arsi boslugu belirle purple-black arasi */
+    outline-offset: 0.2rem;
+}
+.section{
+    text-align: center;
+    padding: 3rem 5rem;
+
+} 
+.section-light{
+    background-color: #f1f1f1;
+    color: #666666;
+    line-height: 1.8rem;
+}
+.section-dark{
+    background-color: #282e28;
+    color: #fff;
+    line-height: 1.8rem;
+
+}
+
+@media(max-width:768px){
+    .heading-container{
+        font-size: 1.5rem;
+    }
+    .heading-containner__heading{
+        padding: 0.7rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        outline: 0.5rem inset purple;
+        outline-offset: 1rem;
+    }
+    .section{
+        padding: 1.5rem,2rem;
+    }
+    .heading-container__logo{
+        width: 50%;
+    }
+}
+
+@media(max-width:500px){
+    .background--image1,
+.background--image2,
+.background--image3,
+.background--image4{
+
+    background-attachment: scroll;
+}
+}
+
+
+
+
