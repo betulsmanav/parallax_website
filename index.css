@@ -121,6 +121,9 @@ html, body{
     .heading-container__logo{
         width: 50%;
     }
+    .heading-containner__text{
+        font-size: 2rem;
+    }
 }
 
 @media(max-width:500px){
